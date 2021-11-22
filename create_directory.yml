@@ -1,6 +1,6 @@
 ---
  - name: Create directory & file 
-   hosts: 10.67.20.232
+   hosts: all
    become: yes
    task:
 
@@ -8,7 +8,6 @@
      file:
        path: /home/centos/Matillion-test
        state: directory
-       mode: "660"
    
    - name: create file
      file:
