@@ -1,16 +1,17 @@
- - name: Create directory & file 
-   hosts: all
-   become: yes
-   task:
+--- 
+- name: Create directory & file 
+  hosts: all
+  become: yes
+  task:
 
-   - name: Create directory
-     file:
-       path: /home/centos/Matillion-test
-       state: directory
+  - name: Create directory
+    file:
+      path: /home/centos/Matillion-test
+      state: directory
    
-   - name: create file
-     file:
-       path: /home/centos/test
-       state: touch
+#   - name: create file
+#    file:
+#       path: /home/centos/test
+#       state: touch
 
 ---
