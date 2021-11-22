@@ -1,0 +1,18 @@
+---
+ - name: Create directory & file 
+   hosts: 10.67.20.232
+   become: yes
+   task:
+
+   - name: Create directory
+     file:
+       path: /home/centos/Matillion-test
+       state: directory
+       mode: "660"
+   
+   - name: create file
+     file:
+       path: /home/centos/test
+       state: touch
+
+---
